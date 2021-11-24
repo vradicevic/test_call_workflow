@@ -1,0 +1,11 @@
+name: Call a reusable workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-workflow:
+    uses: vradicevic/test_secrets/.github/workflows/blank.yml@bc4a6b901132c67f9a8ca3602537cbe04378933a
+
