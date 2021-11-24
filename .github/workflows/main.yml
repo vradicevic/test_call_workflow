@@ -7,5 +7,5 @@ on:
 
 jobs:
   call-workflow:
-    uses: vradicevic/test_secrets/.github/workflows/blank.yml@39aea5b7f25b25f6268801e031ff357e5b1f2ffc
+    uses: vradicevic/test_secrets/.github/workflows/blank.yml@latest
 
