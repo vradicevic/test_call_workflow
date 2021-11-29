@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - bkelava-patch-1
 
 jobs:
   call-workflow:
