@@ -6,7 +6,7 @@ jobs:
     name: A job to say hello
     steps:
       - id: foo
-        uses: vradicevic/actions/generic@v1
+        uses: vradicevic/actions/generic@master
         with:
           who-to-greet: 'Mona the Octocat'
 
