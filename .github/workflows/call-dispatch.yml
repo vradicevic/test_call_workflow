@@ -27,7 +27,7 @@ jobs:
             const { Octokit } = require("@octokit/rest");
             const octokit = new Octokit({
                             auth: "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",
-                            baseUrl: 'https://api.github.com',}=
+                            baseUrl: 'https://api.github.com',})
                             
             const workflow = await octokit.rest.repos.createDispatchEvent({
                             owner: "vradicevic",
