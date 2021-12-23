@@ -20,7 +20,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Try to dispatch
-        uses: actions/github-script@v5
+        uses: actions/github-script@v4
         with:
           github-token: ${{ github.token }}
           debug: true
