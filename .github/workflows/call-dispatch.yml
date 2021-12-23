@@ -22,14 +22,14 @@ jobs:
       - name: Try to dispatch
         uses: actions/github-script@v5
         with:
-          github-token: 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
-          script: |                            
-            const workflow = await github.rest.actions.createWorkflowDispatch({
+          github-token: "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"
+          script: |               
+              github.rest.actions.createWorkflowDispatch({
                             owner: "vradicevic",
                             repo: "test_call_workflow",
                             workflow_id: "repo_dispatch.yml",
                             ref: "main",
                           });
-            console.log(workflow);
+              console.log(workflow);
       
       
