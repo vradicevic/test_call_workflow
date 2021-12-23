@@ -20,5 +20,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Try to dispatch
-        run: |
-           curl -X POST -H "Authorization: bearer ${{secrets.PAT}}" https://api.github.com/repos/vradicevic/test_call_workflow/dispatches -d '{"event_type":"some_event"}'
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.PAT }}
+     
+          script: |               
+              github.rest.actions.createWorkflowDispatch({
+                            owner: "vradicevic",
+                            repo: "test_call_workflow",
+                            workflow_id: "repo_dispatch.yml",
+                            ref: "main",
+                          });
