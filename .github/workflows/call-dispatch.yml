@@ -22,7 +22,7 @@ jobs:
       - name: Try to dispatch
         uses: actions/github-script@v5
         with:
-          github-token: "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"
+          github-token: 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
           script: |
             const workflow = await github.rest.repos.createDispatchEvent({
                             owner: "vradicevic",
