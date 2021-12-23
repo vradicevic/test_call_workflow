@@ -25,9 +25,9 @@ jobs:
           github-token: ${{ github.token }}
           script: |
             const workflow = await github.rest.repos.createDispatchEvent({
-                            owner:"vradicevic",
-                            repo:"test_call_workflow",
-                            event_type:'some_event',
+                            owner: "vradicevic",
+                            repo: "test_call_workflow",
+                            event_type: 'some_event',
                           });
             console.log(workflow);
       
