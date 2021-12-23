@@ -27,6 +27,6 @@ jobs:
               'vradicevic',
               'test_call_workflow',
               'workflows/update.yaml',
-              'main',
+              'main'
             });
       
