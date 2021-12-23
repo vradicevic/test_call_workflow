@@ -22,17 +22,12 @@ jobs:
       - name: Try to dispatch
         uses: actions/github-script@v5
         with:
-        
-          script: |
-            const { Octokit } = require("@octokit/rest");
-            const octokit = new Octokit({
-                            auth: "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",
-                            baseUrl: 'https://api.github.com',})
-                            
-            const workflow = await octokit.rest.repos.createDispatchEvent({
+          script: |                            
+            const workflow = await github.rest.actions.createWorkflowDispatch({
                             owner: "vradicevic",
                             repo: "test_call_workflow",
-                            event_type: 'some_event',
+                            workflow_id: "repo_dispatch.yml",
+                            ref: "main",
                           });
             console.log(workflow);
       
