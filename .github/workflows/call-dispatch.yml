@@ -28,7 +28,7 @@ jobs:
             const workflow = await github.rest.repos.createDispatchEvent({
                             owner:"vradicevic",
                             repo:"test_call_workflow",
-                            event-type:"event",
+                            event_types:"event",
                           });
       
       
