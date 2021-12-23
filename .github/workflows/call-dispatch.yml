@@ -23,10 +23,5 @@ jobs:
         uses: actions/github-script@v5
         with:
           script: |
-            await github.rest.actions.createWorkflowDispatch({
-              'vradicevic',
-              'test_call_workflow',
-              'workflows/repo_dispatch.yaml',
-              'main'
-            });
+            await github.rest.actions.createWorkflowDispatch({'vradicevic','test_call_workflow','workflows/repo_dispatch.yaml','main'});
       
