@@ -26,7 +26,7 @@ jobs:
             await github.rest.actions.createWorkflowDispatch({
               'vradicevic',
               'test_call_workflow',
-              'workflows/update.yaml',
+              'workflows/repo_dispatch.yaml',
               'main'
             });
       
