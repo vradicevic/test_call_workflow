@@ -22,6 +22,14 @@ jobs:
       - name: Try to dispatch
         uses: actions/github-script@v5
         with:
+          github-token: ${{ github.token }}
+          debug: true
           script: |
-            await github.rest.actions.createWorkflowDispatch({'vradicevic','test_call_workflow','workflows/repo_dispatch.yaml','main'});
+            const workflow = await github.actions.createWorkflowDispatch({
+                owner: "vradicevic",
+                repo: "test_call_workflow",
+                workflow_id: "repo_dispatch.yaml",
+                ref: "main"
+            });
+      
       
