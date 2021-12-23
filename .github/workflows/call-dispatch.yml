@@ -22,7 +22,7 @@ jobs:
       - name: Try to dispatch
         uses: actions/github-script@v5
         with:
-          github-token: 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
+          github-token: ${{ secrets.PAT }}
           script: |               
               github.rest.actions.createWorkflowDispatch({
                             owner: "vradicevic",
