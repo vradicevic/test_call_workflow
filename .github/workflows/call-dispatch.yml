@@ -24,8 +24,8 @@ jobs:
         with:
           script: |
             await github.rest.actions.createWorkflowDispatch({
-              'Mause',
-              'fdroidrepo',
+              'vradicevic',
+              'test_call_workflow',
               'workflows/update.yaml',
               'main',
             });
