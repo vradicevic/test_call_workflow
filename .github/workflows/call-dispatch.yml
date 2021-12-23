@@ -20,12 +20,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Try to dispatch
-        uses: actions/github-script@v18
+        uses: actions/github-script@v5
         with:
           github-token: ${{ github.token }}
           debug: true
           script: |
-            const workflow = await octokit.rest.actions.createWorkflowDispatch({
+            const workflow = await github.rest.actions.createWorkflowDispatch({
               "vradicevic",
               "test_call_workflow",
               "repo_dispatch.yaml",
