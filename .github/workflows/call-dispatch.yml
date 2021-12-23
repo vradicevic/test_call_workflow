@@ -20,13 +20,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Try to dispatch
-        uses: actions/github-script@v4
+        uses: actions/github-script@v5
         with:
           github-token: ${{ github.token }}
           debug: true
           script: |
             const workflow = await github.rest.repos.createDispatchEvent({
-                            owner:"vradicevic",
+                            owner:"vradicevic1",
                             repo:"test_call_workflow",
                             event_type:"event",
                           });
